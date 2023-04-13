@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Login page</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="container-img"></div>
+        <h1 id="container-h1">Login Page</h1>
+        
+        <div id="container-input">
+            <label for="" id="container-input-label">Login</label>
+            <input type="text" name="login" id="container-input-login" placeholder="Digite seu login">
+        </div>
+        
+        <div id="container-input">
+            <label for="" id="container-input-label">Senha</label>
+            <input type="password" name="senha" id="container-input-password" placeholder="Digite sua senha">
+        </div>
+
+        <img id="container-eye" src="hide.png" alt="" onclick="changeState()">
+
+        <input id="container-submit" type="submit" value="Entrar">
+        
+        <div id="container-buttons">
+            <a href="#">Esqueceu sua senha?</a>
+            <a href="#">Cadastre-se</a>
+        </div>
+    </div>
+    
+    <script>
+        var eye = document.getElementById("container-eye");
+        var password = document.getElementById("container-input-password");
+
+        var changeState = () =>{
+            if (password.type === "password") {
+                password.type = "text";
+                eye.src = "visible.png";
+            }else{
+                password.type = "password";
+                eye.src = "hide.png";
+            }
+        }
+    </script>
+</body>
+
+</html>
